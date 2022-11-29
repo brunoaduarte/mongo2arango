@@ -68,7 +68,7 @@ public class BulkInsert {
             total++;
             count++;
             doc = cursor.next();
-            doc.remove("_id").toString();
+            doc.remove("_id");
 
             arangoCollection.insertDocument(doc);
 
